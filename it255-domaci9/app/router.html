@@ -1,0 +1,10 @@
+	<div class="form-wrap">
+		<div class="tabs">
+			<h3 class="login-tab"><a class="active" [routerLink]="['./Login']">Login</a></h3>
+			<h3 class="signup-tab"><a [routerLink]="['./Signup']">Sign Up</a></h3>
+		</div><!--.tabs-->
+
+		<div class="tabs-content">
+		<router-outlet></router-outlet>
+		</div><!--.tabs-content-->
+	</div>

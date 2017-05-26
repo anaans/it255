@@ -1,0 +1,22 @@
+<h2>Unsite sobu<br>Popunite sva polja</h2>
+<form [formGroup]="dodajSobuForm" class="forma">
+    <div class="form-group">
+        <p>Tip:</p>
+        <input type="text" class="form-control" formControlName='tip'>
+    </div>
+    <div class="form-group">
+        <p>Sprat:</p>
+        <input type="text" class="form-control" formControlName='sprat'>
+    </div>
+    <div class="form-group">
+        <p>Cena:</p>
+        <input type="text" class="form-control" formControlName='cena'>
+    </div>
+
+    <button (click)="dodaj()" class="btn btn-default" style="margin-bottom: 10px;">Dodaj</button>
+</form>
+<div class="footer">
+    <ul>
+        <li class="f1"></li>
+    </ul>
+</div>

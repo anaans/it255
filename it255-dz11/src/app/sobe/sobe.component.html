@@ -1,0 +1,24 @@
+<div id="content" class="container">
+  <div class="row">
+    <h2>Potrazite sobe koje zelite:</h2>
+    <form class="navbar-form" role="search">
+      <div class="form-group">
+        <p>Pretraziti po tipu: </p>
+        <input type="text" class="form-control" placeholder="Search" name="tip" [(ngModel)]="tip">
+      </div>
+    </form>
+    <form class="navbar-form" role="search">
+      <div class="form-group">
+        <p>Pretraziti po ceni: </p>
+        <input type="text" class="form-control" placeholder="Search" name="cena" [(ngModel)]="cena">
+      </div>
+    </form>
+    <div class="col-md-12">
+      <div *ngFor="let soba of sobe | PretragaTip:tip | PretragaCena: cena">
+
+      Tip:{{soba.tip}} Sprat: {{soba.sprat}} Cena:{{soba.cena}}
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

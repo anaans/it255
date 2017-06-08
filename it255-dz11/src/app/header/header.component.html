@@ -22,12 +22,9 @@
         <li>
           <a routerLink='/dodajSobe'>Dodaj sobu</a>
         </li>
-        <li>
-          <a routerLink='/login'>Login</a>
-        </li>
-        <li>
-          <a routerLink='/registracija'>Registracija</a>
-        </li>
+
+        <li><ng-container *ngIf="isAuth == 'no'"><a routerLink="/login"><span class="glyphicon glyphicon-user"></span>LogIn</a></ng-container></li>
+        <li><ng-container *ngIf="isAuth == 'yes'"><a (click)="logout()"><span class="glyphicon glyphicon-log-in"></span> Logout</a></ng-container></li>
 
       </ul>
     </div>
@@ -42,3 +39,4 @@
 </header>
 
 <router-outlet></router-outlet>
+

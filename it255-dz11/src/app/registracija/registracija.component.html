@@ -1,21 +1,26 @@
-<form action="/action_page.php">
-  <div class="container">
-    <label><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+<div id="content" class="container" class="login" style="width: 430px">
+  <div class="row">
+    <form role="form" [formGroup]="registerForma" align="center" style="width: 430px" class="formal">
+      <h2>Registracija</h2>
+      <input type="text" formControlName='username' placeholder="Username"/>
+      <br>
+      <br>
+      <input type="password" formControlName='password' placeholder="Password"/>
+      <br>
+      <br>
+      <input type="text" formControlName='email' placeholder="E-mail"/>
+      <br>
+      <br>
+      <input type="text" formControlName='ime' placeholder="Ime"/>
+      <br>
+      <br>
+      <input type="text" formControlName='prezime' placeholder="Prezime"/>
+      <br>
 
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <label><b>Username</b></label>
-    <input type="password" placeholder="Username" name="psw-repeat" required>
-
-
-
-    <div class="clearfix">
-      <button type="button"  class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
-    </div>
+      <br>
+      <button (click)="registracija()">Registruj se</button>
+    </form>
   </div>
-</form>
+</div>
 
 
